@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from 2025.imaginaryctf.org/Team/526 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Sep 2025 00:57:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Few Chosen - ImaginaryCTF</title>
+    <meta name="author" content="Et3rnos" />
+    <link rel="icon" type="image/png" href="../img/icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/site9b0e.css?v=TmtIj6OCL9TvkV5vhTkq0is9AtF-cAcome0l_sQ0TQs" />
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MH677SC');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body class="text-center bg-light d-flex flex-column min-vh-100">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH677SC"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+<nav class="navbar navbar-dark sticky-top p-0 text-center josefin">
+    <div class="w-100 bg-logo p-2">
+        <a class="text-decoration-none" href="../index.html">
+            <div class="navbar-brand float-start ms-3">
+                <img src="../img/logo.png" style="filter: invert(1); margin-top: 3px" height="30" class="d-inline-block align-middle logo-img" alt="iCTF">
+            </div>
+            <span class="logo-text text-white float-start">ImaginaryCTF 2025</span>
+        </a>
+        <div class="float-end me-4">
+            <div class="hstack gap-4">
+                <a class="inline-navbar-text text-white float-start text-decoration-none" href="../Challenges.html">
+                    <i class="fa-solid fa-trophy me-1"></i>
+                    Challenges
+                </a>
+                <span>/</span>
+                <a class="inline-navbar-text text-white float-start text-decoration-none" href="../Leaderboard.html">
+                    <i class="fa-solid fa-crown me-1"></i>
+                    Leaderboard
+                </a>
+               <span>/</span>
+                    <a class="text-decoration-none inline-navbar-text text-white float-start text-decoration-none" href="../Register.html">
+                        <i class="fa-solid fa-user-plus me-1"></i>
+                        Register
+                    </a>
+                    <span>/</span>
+                    <a class="text-decoration-none inline-navbar-text text-white float-start text-decoration-none" href="../Login.html">
+                        <i class="fa-solid fa-sign-in me-1"></i>
+                        Login
+                    </a>
+            </div>
+        </div>
+        <button class="navbar-toggler sidenav-toggler float-end m-1 d-none" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="menu sidenav bg-darker-smooth" style="transform: translate(100%)">
+        <ul class="navbar-nav p-2 pl-1 pr-1 big-rounded">
+            <li class="nav-item menu-item mt-1 border-bottom border-2 text-nowrap">
+                <div class="nav-roo-container float-start ms-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+                <a class="nav-link menu-link" href="../index.html">Home Page</a>
+                <div class="nav-roo-container float-end me-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+            </li>
+            <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                <div class="nav-roo-container float-start ms-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+                <a class="nav-link menu-link" href="../Challenges.html">Challenges</a>
+                <div class="nav-roo-container float-end me-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+            </li>
+            <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                <div class="nav-roo-container float-start ms-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+                <a class="nav-link menu-link" href="../Leaderboard.html">Leaderboard</a>
+                <div class="nav-roo-container float-end me-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+            </li>
+            <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                <div class="nav-roo-container float-start ms-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+                <a class="nav-link menu-link" href="../Solves.html">Solves</a>
+                <div class="nav-roo-container float-end me-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+            </li>
+            <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                <div class="nav-roo-container float-start ms-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+                <a class="nav-link menu-link" href="#">Archived Challenges</a>
+                <div class="nav-roo-container float-end me-3">
+                    <img class="nav-roo" src="../img/rooYay.png" />
+                </div>
+            </li>
+                <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                    <div class="nav-roo-container float-start ms-3">
+                        <img class="nav-roo" src="../img/rooYay.png" />
+                    </div>
+                    <a class="nav-link menu-link" href="../Register.html">Register</a>
+                    <div class="nav-roo-container float-end me-3">
+                        <img class="nav-roo" src="../img/rooYay.png" />
+                    </div>
+                </li>
+                <li class="nav-item menu-item mt-2 border-bottom border-2 text-nowrap">
+                    <div class="nav-roo-container float-start ms-3">
+                        <img class="nav-roo" src="../img/rooYay.png" />
+                    </div>
+                    <a class="nav-link menu-link d-inline-block" href="../Login.html">Login</a>
+                    <div class="nav-roo-container float-end me-3">
+                        <img class="nav-roo" src="../img/rooYay.png" />
+                    </div>
+                </li>
+        </ul>
+    </div>
+</nav>
+
+    
+
+
+<div class="container mb-3">
+    <h2 class="m-3">
+        The Few Chosen - 7645 points
+            (3 / 1414)
+    </h2>
+    <hr />
+        <div>
+            <canvas id="chart" width="50" height="200"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
+        <script>
+                var ctx = document.getElementById('chart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        datasets: [
+                            {
+                                label: "Score",
+                                borderColor: "#3db6f2",
+                                backgroundColor: "#3db6f2",
+                                data: [
+                                    { x: moment("2025-09-05T19:00:17.4671530Z"), y: 0 },
+                                    { x: moment("2025-09-05T19:01:02.7601710Z"), y: 100 },
+                                    { x: moment("2025-09-05T19:03:03.4450760Z"), y: 200 },
+                                    { x: moment("2025-09-05T19:04:19.5336510Z"), y: 300 },
+                                    { x: moment("2025-09-05T19:11:16.2223000Z"), y: 400 },
+                                    { x: moment("2025-09-05T19:16:06.6319150Z"), y: 500 },
+                                    { x: moment("2025-09-05T19:19:08.4584940Z"), y: 600 },
+                                    { x: moment("2025-09-05T19:20:24.0620610Z"), y: 700 },
+                                    { x: moment("2025-09-05T19:20:54.2183700Z"), y: 800 },
+                                    { x: moment("2025-09-05T19:33:29.0579730Z"), y: 900 },
+                                    { x: moment("2025-09-05T19:41:51.3225760Z"), y: 1000 },
+                                    { x: moment("2025-09-05T20:03:53.7520860Z"), y: 1100 },
+                                    { x: moment("2025-09-05T20:23:03.0593850Z"), y: 1200 },
+                                    { x: moment("2025-09-05T20:35:32.5374940Z"), y: 1300 },
+                                    { x: moment("2025-09-05T20:36:24.2164720Z"), y: 1400 },
+                                    { x: moment("2025-09-05T21:47:57.6747810Z"), y: 1500 },
+                                    { x: moment("2025-09-05T23:20:16.4954050Z"), y: 1908 },
+                                    { x: moment("2025-09-05T23:30:14.3141430Z"), y: 2253 },
+                                    { x: moment("2025-09-06T00:21:22.1160040Z"), y: 2545 },
+                                    { x: moment("2025-09-06T03:05:25.1463200Z"), y: 2645 },
+                                    { x: moment("2025-09-06T05:47:33.7214130Z"), y: 2745 },
+                                    { x: moment("2025-09-06T06:03:13.5312650Z"), y: 2845 },
+                                    { x: moment("2025-09-06T06:04:27.3255000Z"), y: 2945 },
+                                    { x: moment("2025-09-06T06:25:30.7844580Z"), y: 3045 },
+                                    { x: moment("2025-09-06T08:29:22.2499840Z"), y: 3535 },
+                                    { x: moment("2025-09-06T08:47:35.0871070Z"), y: 3635 },
+                                    { x: moment("2025-09-06T09:13:26.4707890Z"), y: 3735 },
+                                    { x: moment("2025-09-06T10:26:55.9467830Z"), y: 3835 },
+                                    { x: moment("2025-09-06T11:32:11.3315840Z"), y: 4119 },
+                                    { x: moment("2025-09-06T12:35:00.4459230Z"), y: 4601 },
+                                    { x: moment("2025-09-06T13:21:35.6427340Z"), y: 5100 },
+                                    { x: moment("2025-09-06T15:20:01.5197990Z"), y: 5478 },
+                                    { x: moment("2025-09-06T16:08:54.6374530Z"), y: 5915 },
+                                    { x: moment("2025-09-06T17:24:26.1171400Z"), y: 6015 },
+                                    { x: moment("2025-09-06T17:39:04.0270980Z"), y: 6115 },
+                                    { x: moment("2025-09-06T17:47:32.6174840Z"), y: 6215 },
+                                    { x: moment("2025-09-06T17:53:32.3264150Z"), y: 6315 },
+                                    { x: moment("2025-09-06T19:08:22.1732260Z"), y: 6728 },
+                                    { x: moment("2025-09-07T16:12:54.2026760Z"), y: 7146 },
+                                    { x: moment("2025-09-07T16:53:58.1755230Z"), y: 7645 },
+                                    { x: moment(), y: 7645 },
+                                ]
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                type: 'time',
+                                time: {
+                                    tooltipFormat: 'DD/MM - HH:mm'
+                                },
+                            },
+                        },
+                    }
+                });
+        </script>
+    <div class="row mt-2">
+        <div class="col-md-6">
+            <h4>Solved Challenges</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped table-light table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Points</th>
+                                <th>Solved At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>obfuscated-2</td>
+                                    <td>499</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-07T16:53:58.1755230Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>questionably-distributed</td>
+                                    <td>418</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-07T16:12:54.2026760Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>leaky-rsa-revenge</td>
+                                    <td>413</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T19:08:22.1732260Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>stacked</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T17:53:32.3264150Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>x-tension</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T17:47:32.6174840Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>certificate</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T17:39:04.0270980Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>survey</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T17:24:26.1171400Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>codenames-2</td>
+                                    <td>437</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T16:08:54.6374530Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>twowrite</td>
+                                    <td>378</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T15:20:01.5197990Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>nightcore</td>
+                                    <td>499</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T13:21:35.6427340Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>multiplication</td>
+                                    <td>482</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T12:35:00.4459230Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>pwntools</td>
+                                    <td>284</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T11:32:11.3315840Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>whoami</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T10:26:55.9467830Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>zkpow</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T09:13:26.4707890Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>imaginary-notes</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T08:47:35.0871070Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>feistier-network</td>
+                                    <td>490</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T08:29:22.2499840Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>leaky-rsa</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T06:25:30.7844580Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>zoom</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T06:04:27.3255000Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>tax-return</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T06:03:13.5312650Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>obfuscated-1</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T05:47:33.7214130Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>weird-app</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T03:05:25.1463200Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>cascade</td>
+                                    <td>292</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-06T00:21:22.1160040Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>PBJ</td>
+                                    <td>345</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T23:30:14.3141430Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>dinosaur</td>
+                                    <td>408</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T23:20:16.4954050Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>pearl</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T21:47:57.6747810Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>passwordless</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T20:36:24.2164720Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>twisted</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T20:35:32.5374940Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>thrift-store</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T20:23:03.0593850Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>addition</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T20:03:53.7520860Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>codenames-1</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:41:51.3225760Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>scalar-division</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:33:29.0579730Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>comparing</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:20:54.2183700Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>significant</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:20:24.0620610Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>redacted</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:19:08.4584940Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>nimrod</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:16:06.6319150Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>babybof</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:11:16.2223000Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>wave</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:04:19.5336510Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>sanity-check</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:03:03.4450760Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                                <tr>
+                                    <td>discord</td>
+                                    <td>100</td>
+                                    <td>
+                                    <script>document.write(moment("2025-09-05T19:01:02.7601710Z").format('DD/MM HH:mm:ss'))</script></td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="col-md-6">
+            <h4>Unsolved Challenges</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped table-light table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Challenge</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>clcg</td>
+                                    <td>
+                                        486
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>fiumicino</td>
+                                    <td>
+                                        495
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>bigger-rsa</td>
+                                    <td>
+                                        495
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>avalanche</td>
+                                    <td>
+                                        498
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>stillerer-printf</td>
+                                    <td>
+                                        499
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>extra-crunchy-bits</td>
+                                    <td>
+                                        499
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>system-hardening-11</td>
+                                    <td>
+                                        500
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>illegal</td>
+                                    <td>
+                                        500
+                                        </td>
+                                </tr>
+                                <tr>
+                                    <td>memory</td>
+                                    <td>
+                                        500
+                                        </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+    <div class="text-start">
+        <h4>Team Members</h4>
+        <ul>
+                <li><a class="text-decoration-none gray-text cool-link fw-bold" href="../User/1816.html">
+                    caca</a> - 
+                    7645 points</li>
+        </ul>
+    </div>
+</div>
+    <footer class="bg-darker-gray text-white p-2 d-flex align-items-center justify-content-around mt-auto">
+    <small class="josefin">
+        Made with
+        <a class="text-white text-decoration-none cool-link" data-bs-toggle="modal" data-bs-target="#credits" href="#">
+            ImaginaryCTF
+        </a>
+    </small>
+    <div>
+        <a href="https://twitter.com/ImaginaryCtf" class="me-2 text-white text-decoration-none" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.reddit.com/r/ICTF/" class="me-2 text-white text-decoration-none" target="_blank">
+            <i class="fab fa-reddit-alien"></i>
+        </a>
+        <a href="https://discord.gg/vReKWNxPuE" class="me-2 text-white text-decoration-none" target="_blank">
+            <i class="fab fa-discord"></i>
+        </a>
+    </div>
+    <div class="modal fade" id="credits">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">About ImaginaryCTF</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>ImaginaryCTF is a platform created by Et3rnos that brings the beauty of CTF Competitions to discord, releasing a challenge every day</p>
+                    <a class="d-block btn btn-success mb-2" target="_blank" href="https://github.com/Et3rnos/ImaginaryCTF">View ImaginaryCTF on GitHub</a>
+                    <a class="d-block btn btn-danger mb-2" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#support" href="#">Support ImaginaryCTF Creator</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="support">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title">Support Et3rnos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Glad to know you are planning on supporting me!</p>
+                    <div class="mb-2">
+                        <a class="btn btn-danger" target="_blank" href="https://patreon.com/et3rnos">Support Me On Patreon <i class="fab fa-patreon"></i></a>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" target="_blank" href="https://www.paypal.com/donate?hosted_button_id=JSM77LBGLJ3FG">Support Me With Paypal <i class="fab fa-paypal"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/eeaba7a5c6.js"></script>
+    <script src="../js/site7082.js?v=iCCnGY6acmDdTRru-NXP5d3m425iqdOd0iEEzjMUk8I"></script>
+</body>
+
+<!-- Mirrored from 2025.imaginaryctf.org/Team/526 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Sep 2025 00:58:01 GMT -->
+</html>
